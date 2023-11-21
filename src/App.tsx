@@ -1,7 +1,9 @@
-import Message from './Message';
+import Button from './Button'
 
 function App() {
-  return 
+  return (
+    < Button/>
+  )
 }
 
 export default App;
