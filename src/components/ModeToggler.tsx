@@ -1,4 +1,8 @@
+
+  // Event Handling
+
 export default function ModeToggler() {
+  
     let darkModeOn = true;
     const darkMode = <h1>Dark Mode is On</h1>
     const lightMode = <h1>Light Mode is On</h1>
@@ -16,7 +20,7 @@ export default function ModeToggler() {
       <div>
         {darkModeOn ? darkMode : lightMode}
         <button onClick = {handleClick}>
-          Click me
+          Change mode
         </button>
       </div>
     )
