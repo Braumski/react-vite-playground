@@ -2,20 +2,21 @@ import React, { useState } from 'react'  // Import useState from react
 
 export default function Counter (){
 
-  const [count, setCount] = useState(4)
+  const [count, setCount] = useState(4) // In use state, you can determine a starting default value
+
   // The first value in the array destructuring is always the starting value
   // The second value allows you to update your state.
   function decrementCount(){
-    setCount(count-1)   // Set count is written as a function like so
+    setCount(prevCount => prevCount - 5)   // Set count is written as a function like so
   }
   function incrementCount(){
-    setCount(count+1)
+    setCount(prevCount => prevCount + 5) 
   }
   return (
     <>
-      <button onClick={decrementCount}>-</button>
+      <button onClick={decrementCount}> - </button>
       <span>{count}</span>
-      <button onClick={incrementCount}>+</button>
+      <button onClick={incrementCount}> + </button>
     </>
   )
 }
