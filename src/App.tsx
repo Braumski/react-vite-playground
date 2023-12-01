@@ -1,8 +1,9 @@
+import
 import Button from './components/Button'
 import ModeToggler from './components/ModeToggler';
 import {Dog, Puppy, Bowl} from './components/PropsPassing'
 import Counter from './components/UseStateHook'
-import UsingImages from './components/'
+import UsingImages from './components/UsingImages'
 
 function App() {
   
@@ -12,7 +13,7 @@ function App() {
       <Dog />
 
       <Counter />
-      <
+      <UsingImages/>
 
     </>
   )
