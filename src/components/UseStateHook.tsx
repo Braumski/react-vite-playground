@@ -1,4 +1,4 @@
-import React, { useState } from 'react'  // Import useState from react
+import { useState } from 'react'  // Import useState from react
 
 export default function Counter (){
 
