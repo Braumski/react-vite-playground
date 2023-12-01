@@ -7,7 +7,7 @@ export default function ReactVideoPlayerLibrary(){
   structure for now (but it does hide the ugly props from the app component :)*/
   return (
   <>
-    <h3> Very cool Song </h3>
+    <h3 id="cool-song-title"> Very cool Song </h3>
     <ReactPlayer
       url='https://www.youtube.com/watch?v=i_0G6WPuss4'
       controls='true'
