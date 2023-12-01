@@ -4,7 +4,6 @@ import {Dog, Puppy, Bowl} from './components/PropsPassing'
 import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 import Counter from './components/UseStateHook'
 import UsingImages from './components/UsingImages'
-import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 
 function App() {
   
