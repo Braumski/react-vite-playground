@@ -74,6 +74,9 @@ button:focus-visible {
   justify-content: space-between;
 
 }
+#count-box{
+  font-size: 2rem;
+}
 #my-cat-title, #cool-song-title{
   display:flex;
   justify-content: center;
