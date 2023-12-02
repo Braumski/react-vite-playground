@@ -8,14 +8,14 @@ export default function Counter (){
   // The second value allows you to update your state.
   function decrementCount(event: React.MouseEvent<HTMLButtonElement>){
     event.ctrlKey ? 
-    setCount(prevCount => prevCount + 100)
-    :setCount(prevCount=>  prevCount + 1) // Set count is written as a function like so
+    setCount(prevCount => prevCount - 100)
+    :setCount(prevCount=>  prevCount - 1) // Set count is written as a function like so
   }
 
   function incrementCount(event: React.MouseEvent<HTMLButtonElement>){
     event.ctrlKey ? 
-      setCount(prevCount => prevCount - 100)
-      :setCount(prevCount=>  prevCount - 1)
+      setCount(prevCount => prevCount + 100)
+      :setCount(prevCount=>  prevCount + 1)
   }
 
   return (
