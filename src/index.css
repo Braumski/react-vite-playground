@@ -39,8 +39,8 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.4rem 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -72,10 +72,9 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 #count-box{
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 #my-cat-title, #cool-song-title{
   display:flex;
