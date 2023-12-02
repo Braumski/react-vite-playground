@@ -14,7 +14,6 @@ export default function ModeToggler() {
       } else {
         console.log("Light mode is on");
       }
-      console.log(isDark);
     }
 
     return (

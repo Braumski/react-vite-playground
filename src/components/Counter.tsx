@@ -2,7 +2,7 @@ import { useState } from 'react'  // Import useState from react
 
 export default function Counter (){
 
-  const [count, setCount] = useState(4) // In use state, you can determine a starting default value
+  const [count, setCount] = useState(0) // In use state, you can determine a starting default value
 
   // The first value in the array destructuring is always the starting value
   // The second value allows you to update your state.
