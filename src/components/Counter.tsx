@@ -4,20 +4,33 @@ export default function Counter (){
 
   const [count, setCount] = useState(0) // In use state, you can determine a starting default value
 
-  // The first value in the array destructuring is always the starting value
+  // The first value in the array destructuring of useState is always the starting value
   // The second value allows you to update your state.
-  function decrementCount(){
-    setCount(prevCount => prevCount - 5)   // Set count is written as a function like so
+  function decrementCount(event){
+    event.ctrlKey ? 
+    setCount(prevCount => prevCount + 100)
+    :setCount(prevCount=>  prevCount + 1) // Set count is written as a function like so
   }
-  function incrementCount(){
-    setCount(prevCount => prevCount + 5) 
+  function incrementCount(event){
+    event.ctrlKey ? 
+      setCount(prevCount => prevCount + 100)
+      :setCount(prevCount=>  prevCount + 1)
+
+    // if (event.ctrlKey){
+    //   setCount(prevCount => prevCount + 100) 
+    // } else{
+    // setCount(prevCount => prevCount + 5)
+    // }
   }
   return (
+    <>
+    <h1>Hold Ctrl + Click to Count 100</h1>
     <div className="counter-container">
       <button onClick={decrementCount}> - </button>
-      <span id="count-box">{count}</span>
+      <span id="count-num">{count}</span>
       <button onClick={incrementCount}> + </button>
     </div>
+    </>
   )
 }
 

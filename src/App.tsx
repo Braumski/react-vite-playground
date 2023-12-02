@@ -9,7 +9,7 @@ import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
 
 
-function App() {
+export default function App() {
   
   return (
     <>
@@ -33,5 +33,3 @@ function App() {
     </>
   )
 }
-
-export default App;

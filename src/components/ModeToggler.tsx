@@ -4,8 +4,8 @@ import { useState } from 'react'
 export default function ModeToggler() {
 
     const [isDark, setIsDark] = useState(true)
-    const darkMode = <h1>Dark Mode is On</h1>
-    const lightMode = <h1>Light Mode is On</h1>
+    const darkMode = <p>Dark Mode is On</p>
+    const lightMode = <p>Light Mode is On</p>
 
     function handleClick() {
       setIsDark(!isDark);
@@ -17,7 +17,7 @@ export default function ModeToggler() {
     }
 
     return (
-      <div>
+      <div className="mode-toggle-container">
         {isDark ? darkMode : lightMode}
         <button onClick = {handleClick}>
           Change mode
