@@ -1,4 +1,5 @@
 // React
+import { useState } from 'react'
 import {Routes, Route, Link} from 'react-router-dom'
 
 // My files
@@ -10,10 +11,10 @@ import UsingImages from './components/UsingImages'
 
 
 export default function App() {
-  
+  const [isDark, setIsDark] = useState(true)
   return (
-    <>
-      <ModeToggler />
+    <div className="App" id="light">
+      <ModeToggler isDark={isDark} setIsDark={setIsDark}/>
 
       <nav className="nav">
         {/* Link Tags replace Anchor or <a href> tags in React */}
@@ -29,7 +30,6 @@ export default function App() {
         <Route path="/cat" element={<UsingImages/>} />
         <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
       </Routes>
-
-    </>
+    </div>
   )
 }
