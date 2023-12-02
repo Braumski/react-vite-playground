@@ -13,11 +13,11 @@ export default function Counter (){
     setCount(prevCount => prevCount + 5) 
   }
   return (
-    <>
+    <div className="counter-container">
       <button onClick={decrementCount}> - </button>
-      <span>{count}</span>
+      <span id="count-box">{count}</span>
       <button onClick={incrementCount}> + </button>
-    </>
+    </div>
   )
 }
 
