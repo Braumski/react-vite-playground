@@ -3,16 +3,18 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+
 }
-@media (prefers-color-scheme: dark) {
-  /* Apply dark mode styles */
-  :root {
-    background-color: rgba(255, 255, 255, 0.87);
-    color:  #242424;
-  }
+#light{
+  --main-color: rgba(220,220,220);
+  --secondary-color: #242424;
+  --tertiary-color: #306e72;
+}
+#dark{
+  --main-color: #242424;
+  --secondary-color: rgba(220,220,220);
+  --tertiary-color: #306e72;
 }
 #root{
   display:flex;

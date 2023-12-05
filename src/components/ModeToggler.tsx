@@ -1,7 +1,10 @@
+import { useContext } from 'react'
+import { ThemeContext } from '../App'
 
-export default function ModeToggler(props) {
-    const darkMode = <p>Dark Mode is On</p>
-    const lightMode = <p>Light Mode is On</p>
+export default function ModeToggler() {
+    const darkTheme = useContext(ThemeContext)
+    const darkModeText = <p>Dark Mode is On</p>
+    const lightModeText = <p>Light Mode is On</p>
 
     function handleClick() {
       props.setIsDark(!props.isDark)
@@ -14,7 +17,7 @@ export default function ModeToggler(props) {
 
     return (
       <div className="mode-toggle-container">
-        {props.isDark ? darkMode : lightMode}
+        {props.isDark ? darkModeText : lightModeText}
         <button onClick = {handleClick}>
           Change mode
         </button>
