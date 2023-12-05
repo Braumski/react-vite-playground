@@ -1,13 +1,21 @@
 // React
 import { createContext,  useState } from 'react'
+
 //Library
 import {Routes, Route, Link} from 'react-router-dom'
+
+// Library
+// npm install react switch
+import Switch from 'switch';
+
 // My files
-import ModeToggler from './components/ModeToggler';
+
+// import ModeToggler from './components/ModeToggler';
 import {Dog} from './components/PropsPassing'
 import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
+
 // Context Api
 export const ThemeContext = createContext({});
 
@@ -18,11 +26,12 @@ export default function App() {
   const toggleTheme = () => {
     setTheme((curr => (curr === "light" ? "dark" : "light")))
   }
+
   return (
     // the "light" id is for dark mode and light mode
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className="App" id={theme}>
-        <ModeToggler/>
+        <Switch onChange={toggleTheme} checked={true}/>
 
         <nav className="nav">
           {/* Link Tags replace Anchor or <a href> tags in React */}
