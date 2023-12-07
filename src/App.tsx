@@ -4,20 +4,22 @@ import { createContext,  useState } from 'react'
 //Library
 import {Routes, Route, Link} from 'react-router-dom'
 
+
+
 // My files
 import {Dog} from './components/PropsPassing'
 import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
-import ModeToggler from './components/ModeToggler';
+import ReactSwitch from "react-switch";
 
 //  Context
-export const ThemeContext = createContext({})
+export const ThemeContext = createContext(null)
 
 
 
 export default function App() {
-  const [ theme, setTheme ] = useState("light")
+  const [ theme, setTheme ] = useState("dark")
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"))
@@ -25,10 +27,10 @@ export default function App() {
 
   return (
     // the "light" id is for dark mode and light mode
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className="App" id={theme}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="app" id={theme}>
 
-        <ModeToggler toggleTheme={toggleTheme} />
+      <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
 
         <nav className="nav">
           {/* Link Tags replace Anchor or <a href> tags in React */}
