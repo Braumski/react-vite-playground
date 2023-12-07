@@ -14,10 +14,12 @@ import ModeToggler from './components/ModeToggler';
 //  Context
 export const ThemeContext = createContext({})
 
-export default function App() {
-  const [ theme, setTheme ] = useState("dark")
 
-  function themeToggler() {
+
+export default function App() {
+  const [ theme, setTheme ] = useState("light")
+
+  const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"))
   }
 
@@ -26,7 +28,8 @@ export default function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="App" id={theme}>
 
-        <ModeToggler />
+        <ModeToggler toggleTheme={toggleTheme} />
+
         <nav className="nav">
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page. I think they replace each
@@ -52,3 +55,5 @@ export default function App() {
     </ThemeContext.Provider>
   )
 }
+
+

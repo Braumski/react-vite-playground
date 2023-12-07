@@ -10,11 +10,11 @@
   background-color: var(--main-color);
   color: var(--secondary-color);
 }
-#light{
+#light .app{
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
-#dark{
+#dark .app{
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
