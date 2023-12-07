@@ -30,17 +30,21 @@ export default function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id={theme}>
 
-      <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
-
+      <div className="nav-and-switch">
+        <ReactSwitch 
+          onChange={toggleTheme} 
+          checked={theme === "dark"}
+        />
         <nav className="nav">
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page. I think they replace each
           other because they are from the same navbar */}
-          <Link to="/dog-homepage" className="nav-item">Dog</Link>
-          <Link to="/counter" className="nav-item">Counter</Link>
-          <Link to="/cat" className="nav-item">My Cat</Link>
-          <Link to="/cool-song" className="nav-item">Cool Song</Link>
+          <Link to="/dog-homepage" id={theme} className="nav-item">Dog</Link>
+          <Link to="/counter" id={theme} className="nav-item">Counter</Link>
+          <Link to="/cat" id={theme} className="nav-item">My Cat</Link>
+          <Link to="/cool-song" id={theme} className="nav-item">Cool Song</Link>
         </nav>
+      </div>
 
         {/* React routing is managed by third party libraries. The one I am using here
         is called react-router-dom */}
