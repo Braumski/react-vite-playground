@@ -1,7 +1,8 @@
-import { useState } from 'react'  // Import useState from react
+import { useContext, useState } from 'react'  // Import useState from react
+import { ThemeContext } from '../App'
 
 export default function Counter (){
-
+  const theme = useContext(ThemeContext)
   const [count, setCount] = useState(0) // In use state, you can determine a starting default value
 
   // The first value in the array destructuring of useState is always the starting value
@@ -22,9 +23,9 @@ export default function Counter (){
     <>
     <h1>Hold Ctrl + Click to Count 100</h1>
     <div className="counter-container">
-      <button onClick={decrementCount}> - </button>
+      <button id={theme} onClick={decrementCount}> - </button>
       <span id="count-num">{count}</span>
-      <button onClick={incrementCount}> + </button>
+      <button id={theme} onClick={incrementCount}> + </button>
     </div>
     </>
   )
