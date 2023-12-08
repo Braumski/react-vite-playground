@@ -1,13 +1,15 @@
 :root {
   --primary-dark: rgb(29, 29, 29);
   --secondary-dark:  rgb(51, 51, 51);
+  --tertiary-dark: rgb(95, 95, 95);
 
   --primary-light: rgb(243, 243, 243);
   --secondary-light: rgb(190, 190, 190);
 
   --primary-color: rgb(33, 50, 87);
-  --secondary-color: rgb(13, 21, 37);
-  --tertiary-color: rgb(191, 199, 216);
+  --secondary-color: rgb(12, 19, 34);
+  --tertiary-color: rgb(217, 228, 255);
+  --highlight-color: rgb(255, 189, 124);
   
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,18 +19,22 @@
 body {
   margin: 0;
 }
-
+ul, ol{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 #light.app {
-  background-color: var(--primary-light);
+  background-color: var(--tertiary-color);
   color: var(--primary-dark);
 }
 
@@ -38,12 +44,17 @@ body {
 }
 
 a {
+  text-decoration:none;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+}
+#dark a{
+  color:var(--primary-light);
+}
+#light a{
+  color:var(--primary-dark);
 }
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
 }
 
@@ -76,16 +87,15 @@ button:focus-visible {
   display: flex;
 }
 
-.mode-toggle-container>button,
-p {
+.mode-toggle-container>button, p {
   margin: 0;
   font-size: 1rem;
   padding: 10px;
 }
 
-.nav {
+.nav-list {
   display: flex;
-  max-width: 500px;
+  min-width: 400px;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
@@ -96,28 +106,28 @@ p {
   border-radius: 8px;
   transition: transform 125ms;
 }
-.nav-item:hover,
-.nav-item:focus {
-  background-color: #0e102e;
-}
 .nav-item:hover {
   transform: translateY(-0.15rem);
 }
-
 #dark.nav-item , #dark button {
   color:var(--primary-light);
   background-color: var(--primary-color);
 }
 
 #light.nav-item , #light button {
-  color: var(--tertiary-color);
-  background-color: var(--primary-color);
+  color: var(--secondary-dark);
+  background-color: var(--primary-light);
+}
+
+#dark.nav-item .active{
+  color:var(--highlight-color)
+}
+#light.nav-item .active{
+  color: var(--tertiary-dark);
 }
 
 
-
 .counter-container {
-  max-width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -126,13 +136,6 @@ p {
 
 #count-num {
   font-size: 1.75rem;
-}
-
-#my-cat-title,
-#cool-song-title {
-  display: flex;
-  justify-content: center;
-  color: rgb(252, 0, 0);
 }
 
 #my-cat {

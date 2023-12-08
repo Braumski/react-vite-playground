@@ -2,7 +2,7 @@
 import { createContext,  useState } from 'react'
 
 //Library
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route, NavLink} from 'react-router-dom'
 
 
 
@@ -35,14 +35,24 @@ export default function App() {
           onChange={toggleTheme} 
           checked={theme === "dark"}
         />
-        <nav className="nav">
+        <nav>
+          <ul className="nav-list">
+            <li className="nav-item" id={theme}>
+              <NavLink to="/dog-homepage"  >Dog</NavLink>
+            </li>
+            <li className="nav-item" id={theme}>
+              <NavLink to="/counter" >Counter</NavLink>
+            </li>
+            <li className="nav-item" id={theme}>
+              <NavLink to="/cat" >My Cat</NavLink>
+            </li>
+            <li className="nav-item" id={theme}>
+              <NavLink to="/cool-song" >Cool Song</NavLink>
+            </li>
+          </ul>
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page. I think they replace each
           other because they are from the same navbar */}
-          <Link to="/dog-homepage" id={theme} className="nav-item">Dog</Link>
-          <Link to="/counter" id={theme} className="nav-item">Counter</Link>
-          <Link to="/cat" id={theme} className="nav-item">My Cat</Link>
-          <Link to="/cool-song" id={theme} className="nav-item">Cool Song</Link>
         </nav>
       </div>
 
