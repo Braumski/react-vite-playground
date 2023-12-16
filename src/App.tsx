@@ -3,6 +3,7 @@ import { createContext,  useState } from 'react'
 
 //Library
 import {Routes, Route, NavLink} from 'react-router-dom'
+import ReactSwitch from "react-switch";
 
 
 
@@ -11,10 +12,11 @@ import {Dog} from './components/PropsPassing'
 import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
-import ReactSwitch from "react-switch";
+import DataComponent from './components/Data';
+
 
 //  Context
-export const ThemeContext = createContext(null)
+export const ThemeContext = createContext()
 
 
 
@@ -49,6 +51,9 @@ export default function App() {
             <li className="nav-item" id={theme}>
               <NavLink to="/cool-song" >Cool Song</NavLink>
             </li>
+            <li className="nav-item" id={theme}>
+              <NavLink to="/data" >Data</NavLink>
+            </li>
           </ul>
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page. I think they replace each
@@ -66,6 +71,7 @@ export default function App() {
           <Route path="/counter" element={<Counter />}/>
           <Route path="/cat" element={<UsingImages/>} />
           <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
+          <Route path="/data" element={<DataComponent/>} />
         </Routes>
       </div>
     </ThemeContext.Provider>
