@@ -1,12 +1,12 @@
 export default function Form(){
   return(
     <form>
-      <fieldset>
+      <fieldset id="name-fieldset">
         <div className="field">
           <label>Name:</label>
           <input type="text" placeholder="Name" name="name"/>
         </div>
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </fieldset>
     </form>
   )
