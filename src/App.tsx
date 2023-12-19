@@ -13,6 +13,7 @@ import ReactVideoPlayerLibrary from './components/ReactVideoPlayerLibrary';
 import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
 import DataComponent from './components/Data';
+import Form from './components/Form';
 
 
 //  Context
@@ -54,6 +55,9 @@ export default function App() {
             <li className="nav-item" id={theme}>
               <NavLink to="/data" >Data</NavLink>
             </li>
+            <li className="nav-item" id={theme}>
+              <NavLink to="/form" >Form</NavLink>
+            </li>
           </ul>
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page. I think they replace each
@@ -72,6 +76,8 @@ export default function App() {
           <Route path="/cat" element={<UsingImages/>} />
           <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
           <Route path="/data" element={<DataComponent/>} />
+          <Route path="/form" element={<Form/>} />
+
         </Routes>
       </div>
     </ThemeContext.Provider>
