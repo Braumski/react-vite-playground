@@ -95,9 +95,10 @@ button:focus-visible {
 
 .nav-list {
   display: flex;
-  min-width: 400px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
   margin: 20px;
 }
 
