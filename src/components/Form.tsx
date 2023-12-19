@@ -16,23 +16,23 @@ export default function Form(){
     <form onSubmit={handleSubmit}>
       <fieldset id="name-fieldset">
         <div className="field">
-          <label>Name:</label>
+          <label htmlFor="name">Name:</label>
           <input 
+            id="name"
             type="text" 
             placeholder="Name" 
             name="name" 
             value={name} 
-            onChange={(e=> setName(e.target.value))}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <button
           id="submit"
           type="submit"
-          disabled={!name}
+          disabled={!name} //Does not allow submission if there is no input in name field
           style={{
-            backgroundColor: name ? 'var(--primary-color)': 'rgba(var(--primary-color), 0.9)',
-            color: name ? 'var(--primary-light)' : 'var(--secondary-light)'
-          }} //Does not allow submission if there is no input
+            opacity: name ? '1': '0.5' // style change if theres no name field input
+          }} 
         >Submit
         </button>
       </fieldset>

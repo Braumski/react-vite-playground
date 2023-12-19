@@ -161,6 +161,6 @@ button:focus-visible {
   width:100px;
   font-size: 0.8rem;
 }
-#submit-inactive{
-
+button:disabled:hover{
+  cursor: default;
 }
