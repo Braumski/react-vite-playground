@@ -120,11 +120,19 @@ button:focus-visible {
   background-color: var(--primary-light);
 }
 
-#dark.nav-item .active{
-  color:var(--highlight-color)
+a.active > #dark.nav-item{
+  color:var(--highlight-color);
+  -webkit-box-shadow:0px 0px 3px 1px rgba(255, 189, 124, 0.7);
+-moz-box-shadow: 0px 0px 3px 1px rgba(255, 189, 124, 0.7);
+box-shadow: 0px 0px 3px 1px rgba(255, 189, 124, 0.7);
 }
-#light.nav-item .active{
-  color: var(--tertiary-dark);
+
+a.active > #light.nav-item{
+  color: var(--primary-light);
+  background-color: var(--primary-color);
+  -webkit-box-shadow:0px 0px 3px 1px rgba(243, 243, 243, 0.7);
+-moz-box-shadow: 0px 0px 3px 1px rgba(243, 243, 243, 0.7);
+box-shadow: 0px 0px 10px 10px rgba(243, 243, 243, 0.7);
 }
 
 

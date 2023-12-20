@@ -40,28 +40,69 @@ export default function App() {
         />
         <nav>
           <ul className="nav-list">
-            <li className="nav-item" id={theme}>
-              <NavLink to="/dog-homepage"  >Dog</NavLink>
-            </li>
-            <li className="nav-item" id={theme}>
-              <NavLink to="/counter" >Counter</NavLink>
-            </li>
-            <li className="nav-item" id={theme}>
-              <NavLink to="/cat" >My Cat</NavLink>
-            </li>
-            <li className="nav-item" id={theme}>
-              <NavLink to="/cool-song" >Cool Song</NavLink>
-            </li>
-            <li className="nav-item" id={theme}>
-              <NavLink to="/data" >Data</NavLink>
-            </li>
-            <li className="nav-item" id={theme}>
-              <NavLink to="/form" >Form</NavLink>
-            </li>
+
+            <NavLink 
+            to="/dog"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Dog
+              </li>
+            </NavLink>
+
+            <NavLink 
+            to="/counter"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Counter
+              </li>
+            </NavLink>
+
+            <NavLink 
+            to="/cat"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                My Cat
+              </li>
+            </NavLink>
+
+            <NavLink 
+            to="/cool-song"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Cool Song
+              </li>
+            </NavLink>
+
+            <NavLink 
+            to="/data"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Data
+              </li>
+            </NavLink>
+
+            <NavLink 
+            to="/form"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Form
+              </li>
+            </NavLink>
           </ul>
           {/* Link Tags replace Anchor or <a href> tags in React */}
-          {/* These links add components to the page. I think they replace each
-          other because they are from the same navbar */}
+          {/* These links add components to the page.*/}
         </nav>
       </div>
 
@@ -71,7 +112,7 @@ export default function App() {
         {/* npm install react-router-dom */}
         {/* Check the BrowserRouter tag in the "main.tsx" file */}
         <Routes>
-          <Route path="/dog-homepage" element={<Dog />}/>
+          <Route path="/dog" element={<Dog />}/>
           <Route path="/counter" element={<Counter />}/>
           <Route path="/cat" element={<UsingImages/>} />
           <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
