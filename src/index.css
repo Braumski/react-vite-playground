@@ -33,26 +33,26 @@ ul, ol{
   height: 100vh;
 }
 
-#light.app {
-  background-color: var(--tertiary-color);
-  color: var(--primary-dark);
-}
+  #light.app {
+    background-color: var(--tertiary-color);
+    color: var(--primary-dark);
+  }
 
-#dark.app {
-  background-color: var(--secondary-color);
-  color: var(--primary-light);
-}
+  #dark.app {
+    background-color: var(--secondary-color);
+    color: var(--primary-light);
+  }
 
 a {
   text-decoration:none;
   font-weight: 500;
 }
-#dark a{
-  color:var(--primary-light);
-}
-#light a{
-  color:var(--primary-dark);
-}
+  #dark a{
+    color:var(--primary-light);
+  }
+  #light a{
+    color:var(--primary-dark);
+  }
 h1 {
   font-size: 2.5em;
   line-height: 1.1;
@@ -68,14 +68,14 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: var(--secondary-color);
-}
+  button:hover {
+    border-color: var(--secondary-color);
+  }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 
 .nav-and-switch {
   display: flex;
@@ -102,23 +102,24 @@ button:focus-visible {
   margin: 20px;
 }
 
-.nav-item {
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  transition: transform 125ms;
-}
-.nav-item:hover {
-  transform: translateY(-0.15rem);
-}
-#dark.nav-item , #dark button {
-  color:var(--primary-light);
-  background-color: var(--primary-color);
-}
+  .nav-item {
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    transition: transform 125ms;
+  }
+    .nav-item:hover {
+      transform: translateY(-0.15rem);
+    }
 
-#light.nav-item , #light button {
-  color: var(--secondary-dark);
-  background-color: var(--primary-light);
-}
+  #dark.nav-item , #dark button {
+    color:var(--primary-light);
+    background-color: var(--primary-color);
+  }
+
+  #light.nav-item , #light button {
+    color: var(--secondary-dark);
+    background-color: var(--primary-light);
+  }
 
 a.active > #dark.nav-item{
   color:var(--highlight-color);
