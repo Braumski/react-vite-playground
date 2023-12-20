@@ -48,7 +48,7 @@ export default function App() {
             to="/dog"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Dog
               </li>
@@ -58,7 +58,7 @@ export default function App() {
             to="/counter"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Counter
               </li>
@@ -68,7 +68,7 @@ export default function App() {
             to="/cat"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 My Cat
               </li>
@@ -78,7 +78,7 @@ export default function App() {
             to="/cool-song"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Cool Song
               </li>
@@ -88,7 +88,7 @@ export default function App() {
             to="/data"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Data
               </li>
@@ -98,7 +98,7 @@ export default function App() {
             to="/form"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Form
               </li>
@@ -108,7 +108,7 @@ export default function App() {
             to="/feedback"
             className={({isActive}) =>
               isActive ? "active" : ""}
-             >
+            >
               <li className="nav-item" id={theme}>
                 Feedback
               </li>
