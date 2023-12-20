@@ -18,8 +18,10 @@ import FeedbackForm from './components/FeedbackForm';
 
 
 //  Context
-export const ThemeContext = createContext()
-
+export const ThemeContext = createContext({
+  theme: "",
+  toggleTheme: () => {}
+});
 
 
 export default function App() {
