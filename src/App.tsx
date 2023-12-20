@@ -14,6 +14,7 @@ import Counter from './components/Counter'
 import UsingImages from './components/UsingImages'
 import DataComponent from './components/Data';
 import Form from './components/Form';
+import FeedbackForm from './components/FeedbackForm';
 
 
 //  Context
@@ -118,7 +119,7 @@ export default function App() {
           <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
           <Route path="/data" element={<DataComponent/>} />
           <Route path="/form" element={<Form/>} />
-
+          <Route path="/feedback" element{<FeedbackForm/>} />
         </Routes>
       </div>
     </ThemeContext.Provider>
