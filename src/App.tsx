@@ -101,6 +101,16 @@ export default function App() {
                 Form
               </li>
             </NavLink>
+
+            <NavLink 
+            to="/feedback"
+            className={({isActive}) =>
+              isActive ? "active" : ""}
+             >
+              <li className="nav-item" id={theme}>
+                Feedback
+              </li>
+            </NavLink>
           </ul>
           {/* Link Tags replace Anchor or <a href> tags in React */}
           {/* These links add components to the page.*/}
@@ -119,7 +129,7 @@ export default function App() {
           <Route path="/cool-song" element={<ReactVideoPlayerLibrary/>} />
           <Route path="/data" element={<DataComponent/>} />
           <Route path="/form" element={<Form/>} />
-          <Route path="/feedback" element{<FeedbackForm/>} />
+          <Route path="/feedback" element={<FeedbackForm/>} />
         </Routes>
       </div>
     </ThemeContext.Provider>
