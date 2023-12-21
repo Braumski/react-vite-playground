@@ -14,7 +14,7 @@ export default function Form(){
 
   return(
     <form onSubmit={handleSubmit}>
-      <fieldset id="name-fieldset">
+      <fieldset className="name-fieldset">
         <div className="field">
           <label htmlFor="name">Name:</label>
           <input 

@@ -173,7 +173,7 @@ fieldset{
   border-radius: 8px;
   border-color: var(--primary-color);
 }
-#name-fieldset{
+.name-fieldset{
   min-width:300px;
   display: flex;
   flex-direction: column;
@@ -183,9 +183,12 @@ fieldset{
 input{
   all:unset;
   border-radius: 12px;
-  padding:4px;
+  padding:4px 12px 4px 12px;
   background-color:var(--primary-color);
 }
+  .feedback > .field > input {
+    padding: 0 4px 0 4px;
+  }
 fieldset.feedback{
   display: flex;
   flex-direction: column;
@@ -197,10 +200,14 @@ fieldset.feedback{
 .field{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  /* gap: 4px; */
   width:100%;
 }
 textarea{
+  all:unset;
+  border-radius: 12px;
+  padding: 12px;
+  resize:none;
   background-color: var(--primary-color);
 }
 
