@@ -23,7 +23,6 @@ export const ThemeContext = createContext({
   toggleTheme: () => {}
 });
 
-
 export default function App() {
   const [ theme, setTheme ] = useState("dark")
 
