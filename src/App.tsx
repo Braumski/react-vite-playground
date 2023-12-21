@@ -40,12 +40,18 @@ export default function App() {
         <ReactSwitch 
           onChange={toggleTheme} 
           checked={theme === "dark"}
+          offColor='#bfbfbf'
+          onColor="#dd8d3e"
+          onHandleColor="#213257"
+          checkedIcon = {false}
+          uncheckedIcon = {false}
         />
         <nav>
           <ul className="nav-list">
 
             <NavLink 
             to="/dog"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -56,6 +62,7 @@ export default function App() {
 
             <NavLink 
             to="/counter"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -66,6 +73,7 @@ export default function App() {
 
             <NavLink 
             to="/cat"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -76,6 +84,7 @@ export default function App() {
 
             <NavLink 
             to="/cool-song"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -86,6 +95,7 @@ export default function App() {
 
             <NavLink 
             to="/data"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -96,6 +106,7 @@ export default function App() {
 
             <NavLink 
             to="/form"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -106,6 +117,7 @@ export default function App() {
 
             <NavLink 
             to="/feedback"
+            tabIndex= "0"
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
