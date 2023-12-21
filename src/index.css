@@ -11,7 +11,7 @@
   --tertiary-color: rgb(217, 228, 255);
   --highlight-color: rgb(255, 189, 124);
   
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
@@ -180,6 +180,12 @@ fieldset{
   align-items: center;
   gap: 20px;
 }
+input{
+  all:unset;
+  border-radius: 12px;
+  padding:4px;
+  background-color:var(--primary-color);
+}
 fieldset.feedback{
   display: flex;
   flex-direction: column;
@@ -191,7 +197,17 @@ fieldset.feedback{
 .field{
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
   width:100%;
+}
+textarea{
+  background-color: var(--primary-color);
+}
+
+hr{
+  background-color:var(--primary-color);
+  border: 1px solid var(--primary-color);
+  position:relative;
+  right:5%;
+  width:110%;
 }
