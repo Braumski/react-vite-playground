@@ -3,7 +3,7 @@ import { ThemeContext } from "../App"
 
 export default function Form(){
   const [name, setName] = useState("")
-  const {theme, toggleTheme} = useContext(ThemeContext)
+  const {theme} = useContext(ThemeContext)
 
   const handleSubmit = (e) => {
     e.preventDefault() //Stops page refresh

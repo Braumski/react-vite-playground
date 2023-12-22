@@ -39,11 +39,13 @@ export default function App() {
         <ReactSwitch 
           onChange={toggleTheme} 
           checked={theme === "dark"}
-          offColor='#7f7f7f'
+          offColor="#7f7f7f"
           onColor="#dd8d3e"
           onHandleColor="#213257"
+          offHandleColor='#D7E4EA'
           checkedIcon = {false}
           uncheckedIcon = {false}
+          handleDiameter={22}
         />
         <nav>
           <ul className="nav-list">
