@@ -153,7 +153,7 @@ a.active > #light.nav-item{
   background-color: var(--primary-color);
   -webkit-box-shadow:0px 0px 3px 1px rgba(243, 243, 243, 0.7);
 -moz-box-shadow: 0px 0px 3px 1px rgba(243, 243, 243, 0.7);
-box-shadow: 0px 0px 10px 10px rgba(243, 243, 243, 0.7);
+box-shadow: 0px 0px 5px 5px rgba(243, 243, 243, 0.7);
 /* For some reason, a variable color wouldn't work here, so I had to hard code the color */
 
 }
