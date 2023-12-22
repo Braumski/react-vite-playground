@@ -39,7 +39,7 @@ export default function App() {
         <ReactSwitch 
           onChange={toggleTheme} 
           checked={theme === "dark"}
-          offColor='#bfbfbf'
+          offColor='#7f7f7f'
           onColor="#dd8d3e"
           onHandleColor="#213257"
           checkedIcon = {false}

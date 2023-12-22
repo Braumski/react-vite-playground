@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { ThemeContext } from "../App"
 
 export default function Form(){
   const [name, setName] = useState("")
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   const handleSubmit = (e) => {
     e.preventDefault() //Stops page refresh
@@ -9,16 +11,13 @@ export default function Form(){
     console.log("Form Submitted!")
   }
 
-  
-
-
   return(
     <form onSubmit={handleSubmit}>
       <fieldset className="name-fieldset">
         <div className="field">
           <label htmlFor="name">Name:</label>
           <input 
-            id="name"
+            id={theme}
             type="text" 
             placeholder="Name" 
             name="name" 

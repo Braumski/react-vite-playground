@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { ThemeContext } from "../App";
 
 export default function FeedbackForm(){
   const [score, setScore] = useState("10");
   const [comment, setComment] = useState("");
+  const {theme, toggleTheme} = useContext(ThemeContext);
 
   return(
     <fieldset className="feedback">
@@ -17,10 +19,10 @@ export default function FeedbackForm(){
          onChange={e => setScore(e.target.value)}
         />
       </div>
-      <hr/>
+
       <div className="field">
         <label htmlFor="">Comment:</label>
-        <textarea name="comment" cols="30" rows="10"></textarea>
+        <textarea id={theme} name="comment" cols="30" rows="10"></textarea>
       </div>
       <button type="submit">
         Submit
