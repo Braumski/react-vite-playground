@@ -52,7 +52,7 @@ export default function App() {
 
             <NavLink 
             to="/dog"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -63,7 +63,7 @@ export default function App() {
 
             <NavLink 
             to="/counter"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -74,7 +74,7 @@ export default function App() {
 
             <NavLink 
             to="/cat"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -85,7 +85,7 @@ export default function App() {
 
             <NavLink 
             to="/cool-song"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -96,7 +96,7 @@ export default function App() {
 
             <NavLink 
             to="/data"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -107,7 +107,7 @@ export default function App() {
 
             <NavLink 
             to="/form"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >
@@ -118,7 +118,7 @@ export default function App() {
 
             <NavLink 
             to="/feedback"
-            tabIndex= "0"
+            tabIndex= {0 as number}
             className={({isActive}) =>
               isActive ? "active" : ""}
             >

@@ -8,8 +8,8 @@ export default function ReactVideoPlayerLibrary(){
 
     <ReactPlayer
       url='https://www.youtube.com/watch?v=i_0G6WPuss4'
-      controls='true'
-      loop='true'
+      controls= {true}
+      loop= {true}
     />
   </>
   )
