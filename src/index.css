@@ -77,15 +77,15 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, transform 125ms;
 }
   button:hover {
-    border-color: var(--secondary-color);
+    transform: translateY(-0.15rem);
   }
 
   button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+  button:focus-visible {  
+    transform: translateY(-0.15rem);
   }
 
   button[type="submit"] {
@@ -205,7 +205,7 @@ fieldset.feedback{
 .field{
   display: flex;
   flex-direction: column;
-  /* gap: 4px; */
+  gap: 4px;
   width:100%;
 }
 textarea{
