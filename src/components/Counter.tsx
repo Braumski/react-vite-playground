@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'  // Import useState from react
 import { ThemeContext } from '../App'
 
 export default function Counter (){
-  const theme = useContext(ThemeContext)
+  const {theme} = useContext(ThemeContext)
   const [count, setCount] = useState(0) // In use state, you can determine a starting default value
 
   // The first value in the array destructuring of useState is always the starting value
