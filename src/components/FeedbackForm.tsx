@@ -38,8 +38,8 @@ export default function FeedbackForm(){
           <textarea 
             id={theme} 
             name="comment"
-            cols="30" 
-            rows="10"
+            cols={30 as number} 
+            rows={10 as number}
             value={comment}
             onChange={e => setComment(e.target.value)}
           />
