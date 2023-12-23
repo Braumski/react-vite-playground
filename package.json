@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://<username>.github.io/<repo>/",
-"scripts": {
+  "scripts": {
     "dev": "vite",
-    "build": "vite build gh-pages -d dist",
+    "build": "vite build && gh-pages -d dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview"
