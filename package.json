@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<username>.github.io/<repo>/",
+  "homepage": "https://braumski.github.io/react-vite-playground/",
   "scripts": {
     "dev": "vite",
     "build": "vite build && gh-pages -d dist",
