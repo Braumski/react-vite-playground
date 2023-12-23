@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/https://braumski.github.io/react-vite-playground/'
+    config.base = '/react-vite-playground/'
   }
 
   return config
