@@ -39,25 +39,26 @@ export default function App() {
   return (
     // the "light" id is for dark mode and light mode
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="app" id={theme}>
+    <div className="app" id={theme}>
 
       <div className="nav-and-switch">
-       
-        {theme === "dark" ?
-         <img src={Moon} width="16" className="svg" id={theme}/> : 
-         <img src={Sun} width="20" className="svg" id={theme}/> }
+        <div className="theme-switch-container">
+          {theme === "dark" ?
+          <img src={Moon} width="16" className="svg" id={theme}/> : 
+          <img src={Sun} width="24" className="svg" id={theme}/> }
 
-        <ReactSwitch 
-          onChange={toggleTheme} 
-          checked={theme === "dark"}
-          offColor="#7f7f7f"
-          onColor="#dd8d3e"
-          onHandleColor="#213257"
-          offHandleColor='#D7E4EA'
-          checkedIcon = {false}
-          uncheckedIcon = {false}
-          handleDiameter={22}
-        />
+          <ReactSwitch 
+            onChange={toggleTheme} 
+            checked={theme === "dark"}
+            offColor="#7f7f7f"
+            onColor="#dd8d3e"
+            onHandleColor="#213257"
+            offHandleColor='#D7E4EA'
+            checkedIcon = {false}
+            uncheckedIcon = {false}
+            handleDiameter={22}
+          />
+        </div>
         <nav>
           <ul className="nav-list">
 
