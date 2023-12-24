@@ -45,7 +45,7 @@ export default function App() {
         <div className="theme-switch-container">
           {theme === "dark" ?
           <img src={Moon} width="16" className="svg" id={theme}/> : 
-          <img src={Sun} width="24" className="svg" id={theme}/> }
+          <img src={Sun} width="20" className="svg" id={theme}/> }
 
           <ReactSwitch 
             onChange={toggleTheme} 
