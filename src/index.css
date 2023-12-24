@@ -214,3 +214,7 @@ textarea{
   padding: 12px;
   resize:none;
 }
+
+img.svg#dark{
+  fill:red;
+}

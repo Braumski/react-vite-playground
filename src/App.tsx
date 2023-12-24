@@ -17,8 +17,8 @@ import ReactSwitch from "react-switch";
   import Form from './components/Form';
   import FeedbackForm from './components/FeedbackForm';
   // SVG
-  import Moon from '../public/svg/moon-solid.svg'
-  import Sun from '../public/svg/sun-solid.svg'
+  import Moon from '../src/svg/moon-solid.svg'
+  import Sun from '../src/svg/sun-solid.svg'
 
 
 //  Context
@@ -44,8 +44,8 @@ export default function App() {
       <div className="nav-and-switch">
        
         {theme === "dark" ?
-         <img src={Moon} width="16"/> : 
-         <img src={Sun} width="20" /> }
+         <img src={Moon} width="16" className="svg" id={theme}/> : 
+         <img src={Sun} width="20" className="svg" id={theme}/> }
 
         <ReactSwitch 
           onChange={toggleTheme} 

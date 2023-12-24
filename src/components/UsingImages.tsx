@@ -1,4 +1,4 @@
-import CatImg from '../../public/images/Angry-Kitty-Wallpaper-random-36918482-1920-1200.jpg'
+import CatImg from '../../src/images/Angry-Kitty-Wallpaper-random-36918482-1920-1200.jpg'
 
 export default function UsingImages(){
   return(
