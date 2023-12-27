@@ -32,7 +32,6 @@ export default function App() {
   };
 
   return (
-    // the "light" id is for dark mode and light mode
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id={theme}>
         <div className="nav-and-switch">
