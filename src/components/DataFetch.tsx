@@ -9,39 +9,57 @@ interface Pokemon {
 
 export default function DataFetch() {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
-  const inputRef = useRef();
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const fetchData = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${inputRef}/`)
-      .then((response) => response.json())
-      .then((json: Pokemon | Pokemon[]) => {
-        const singlePokemon = Array.isArray(json) ? json[0] : json;
-        setPokemon(singlePokemon);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
+  const fetchData = async () => {
+    try {
+      const inputValue = inputRef.current?.value?.toLowerCase();
+      if (!inputValue) {
+        console.error("Please enter a Pokemon name");
         setPokemon(null);
-      });
+        return;
+      }
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${inputValue.toLowerCase()}/`
+      );
+      const json = await response.json();
+
+      setPokemon(json);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setPokemon(null);
+    }
   };
 
-  useEffect(() => {
+  //   fetch(`https://pokeapi.co/api/v2/pokemon/${inputRef}/`)
+  //     .then((response) => response.json())
+  //     .then((json: Pokemon | Pokemon[]) => {
+  //       const singlePokemon = Array.isArray(json) ? json[0] : json;
+  //       setPokemon(singlePokemon);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //       setPokemon(null);
+  //     });
+  // };
+
+  function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
     fetchData();
-  }, []);
+  }
 
   return (
     <>
-      <input
-        type="text"
-        name="pokemon-search"
-        placeholder="Enter a Pokemon name"
-        ref={inputRef}
-        onChange={handleChange}
-      ></input>
-
-      <form>
-        <label htmlFor="searchInput">Search:</label>
-        <input type="search" id="searchInput" name="search" />
-        <input type="submit" value="Search" />
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="pokemon-search">Search:</label>
+        <input
+          type="search"
+          id="pokemon-search"
+          name="pokemon-search"
+          placeholder="Enter a Pokemon name"
+          ref={inputRef}
+        />
+        <button type="submit">Search</button>
       </form>
 
       {pokemon ? (
