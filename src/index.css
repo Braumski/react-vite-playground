@@ -83,11 +83,6 @@ button:hover {
   transform: translateY(-0.15rem);
 }
 
-/* button:focus,
-button:focus-visible {
-  transform: translateY(-0.15rem);
-} */
-
 button[type="submit"] {
   width: 100px;
   font-size: 0.8rem;
@@ -99,6 +94,10 @@ button:disabled:hover {
 .theme-switch-container {
   display: flex;
   gap: 8px;
+}
+.theme-switch-container > img {
+  width: 15px;
+  position: relative;
 }
 .nav-and-switch {
   display: flex;

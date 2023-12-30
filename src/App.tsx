@@ -16,8 +16,7 @@ import Form from "./components/Form";
 import FeedbackForm from "./components/FeedbackForm";
 import DataFetch from "./components/DataFetch";
 // SVG
-import Moon from "../src/svg/moon-solid.svg";
-import Sun from "../src/svg/sun-solid.svg";
+import ThemeIcon from "../src/svg/theme-icon.svg";
 
 //  Context
 export const ThemeContext = createContext({
@@ -38,9 +37,9 @@ export default function App() {
         <div className="nav-and-switch">
           <div className="theme-switch-container">
             {theme === "dark" ? (
-              <img src={Moon} width="16" className="svg" id={theme} />
+              <img src={ThemeIcon} className="svg" id={theme} />
             ) : (
-              <img src={Sun} width="20" className="svg" id={theme} />
+              <img src={ThemeIcon} className="svg" id={theme} />
             )}
 
             <ReactSwitch
