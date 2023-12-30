@@ -62,7 +62,14 @@ h1 {
   font-size: 2.5em;
   line-height: 1.1;
 }
-
+input {
+  all: unset;
+  border-radius: 12px;
+  padding: 4px 12px 4px 12px;
+}
+select {
+  appearance: none;
+}
 #dark input,
 #dark textarea {
   background-color: var(--primary-color);
@@ -71,6 +78,7 @@ h1 {
 #light textarea {
   background-color: var(--primary-light);
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -197,11 +205,7 @@ fieldset {
   align-items: center;
   gap: 20px;
 }
-input {
-  all: unset;
-  border-radius: 12px;
-  padding: 4px 12px 4px 12px;
-}
+
 .feedback > .field > input {
   padding: 0 4px 0 4px;
 }
@@ -225,4 +229,14 @@ textarea {
   border-radius: 12px;
   padding: 12px;
   resize: none;
+}
+.pkmn-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.pkmn-search > input {
+  background-color: red;
+  margin-right: 40px;
 }
