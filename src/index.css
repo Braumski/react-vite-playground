@@ -2,12 +2,14 @@
   --primary-dark: rgb(29, 29, 29);
   --secondary-dark: rgb(51, 51, 51);
 
-  --primary-light: #e8faff;
-  --color-light: #b5d0dd;
-  --color-light-2: #d7e4ea;
+  --primary-light: rgb(232, 250, 255);
+
+  --color-light: rgb(181, 208, 221);
+  --color-light-2: rgb(215, 228, 234);
 
   --primary-color: rgb(33, 50, 87);
   --secondary-color: rgb(12, 19, 34);
+  --tertiary-color: rgb(182, 194, 213);
 
   --highlight-color: rgb(255, 189, 124);
 
@@ -93,17 +95,23 @@ button:disabled:hover {
 
 .theme-switch-container {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
 }
-.theme-switch-container > img {
-  width: 15px;
-  position: relative;
+
+.theme-icon#dark,
+.theme-icon#light {
+  width: 24px;
+}
+#dark.theme-icon {
+  color: white;
 }
 .nav-and-switch {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 40px;
+  margin: 20px;
 }
 
 .mode-toggle-container {
@@ -123,7 +131,6 @@ p {
   justify-content: flex-start;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 20px;
 }
 
 .nav-item {

@@ -5,7 +5,8 @@ import { createContext, useState } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import ReactSwitch from "react-switch";
 
-// My files
+// My files  ///////////////////////////////////
+
 // Components
 import { Dog } from "./components/PropsPassing";
 import ReactVideoPlayerLibrary from "./components/ReactVideoPlayerLibrary";
@@ -15,14 +16,18 @@ import DataComponent from "./components/Data";
 import Form from "./components/Form";
 import FeedbackForm from "./components/FeedbackForm";
 import DataFetch from "./components/DataFetch";
+
 // SVG
-import ThemeIcon from "../src/svg/theme-icon.svg";
+import ThemeIconDark from "./svg/ThemeIconDark";
+import ThemeIconLight from "./svg/ThemeIconLight";
 
 //  Context
 export const ThemeContext = createContext({
   theme: "",
   toggleTheme: () => {},
 });
+
+////////////////////////////
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -36,11 +41,7 @@ export default function App() {
       <div className="app" id={theme}>
         <div className="nav-and-switch">
           <div className="theme-switch-container">
-            {theme === "dark" ? (
-              <img src={ThemeIcon} className="svg" id={theme} />
-            ) : (
-              <img src={ThemeIcon} className="svg" id={theme} />
-            )}
+            {theme === "dark" ? <ThemeIconDark /> : <ThemeIconLight />}
 
             <ReactSwitch
               onChange={toggleTheme}
