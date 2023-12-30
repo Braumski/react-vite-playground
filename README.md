@@ -3,5 +3,5 @@ Just tiny projects that I make in each link on the site. This is where I mess ar
 
 ## Lessons learned / mistakes I made
 - **Make future apps more modular -** I spilled a lot of code in the app file that should have been in components. I wanted to fix this but since this is a playground project and I want to keep the lessons learned rough and ugly, I thought it wouldn't be worth the time.
-- **Keep context api in seperate file -** The theme context api should have also been in a seperate file, I didn't know you could do that until it was alread implemented.
+- **Keep context api in seperate file -** The theme context api should have also been in a seperate file, I didn't know you could do that until it was already implemented.
 - **Organize CSS beforehand -** The CSS didn't get too crazy because this project is small, but it was getting a little hairy as I went on. I found out there are many methods to organize CSS in a project beforehand and will be planning ahead next time.
