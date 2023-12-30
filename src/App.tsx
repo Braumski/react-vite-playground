@@ -14,6 +14,7 @@ import UsingImages from "./components/UsingImages";
 import DataComponent from "./components/Data";
 import Form from "./components/Form";
 import FeedbackForm from "./components/FeedbackForm";
+import DataFetch from "./components/DataFetch";
 // SVG
 import Moon from "../src/svg/moon-solid.svg";
 import Sun from "../src/svg/sun-solid.svg";
@@ -52,6 +53,7 @@ export default function App() {
               checkedIcon={false}
               uncheckedIcon={false}
               handleDiameter={22}
+              activeBoxShadow="0 0 0 5px #ffffff"
             />
           </div>
           <nav>
@@ -125,6 +127,16 @@ export default function App() {
                   Feedback
                 </li>
               </NavLink>
+
+              <NavLink
+                to="/data-fetch"
+                tabIndex={0 as number}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <li className="nav-item" id={theme}>
+                  Data Fetch
+                </li>
+              </NavLink>
             </ul>
             {/* Link Tags replace Anchor or <a href> tags in React */}
             {/* These links add components to the page.*/}
@@ -144,6 +156,7 @@ export default function App() {
           <Route path="/data" element={<DataComponent />} />
           <Route path="/form" element={<Form />} />
           <Route path="/feedback" element={<FeedbackForm />} />
+          <Route path="/data-fetch" element={<DataFetch />} />
         </Routes>
       </div>
     </ThemeContext.Provider>

@@ -49,9 +49,6 @@ a {
   font-weight: 500;
   transition: transform 125ms;
 }
-a:focus {
-  transform: translateY(-0.15rem);
-}
 
 #dark a {
   color: var(--primary-light);
@@ -86,10 +83,10 @@ button:hover {
   transform: translateY(-0.15rem);
 }
 
-button:focus,
+/* button:focus,
 button:focus-visible {
   transform: translateY(-0.15rem);
-}
+} */
 
 button[type="submit"] {
   width: 100px;
@@ -222,8 +219,4 @@ textarea {
   border-radius: 12px;
   padding: 12px;
   resize: none;
-}
-
-img.svg#dark {
-  fill: red;
 }
