@@ -4,6 +4,7 @@ import { ThemeContext } from "../App";
 //Library
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import Fuse from "fuse.js";
 
 interface Pokemon {
   name: string;
@@ -17,16 +18,20 @@ export default function DataFetch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState();
   const { theme } = useContext(ThemeContext);
-  const pokemonNames = [];
+  const pokemonList = [];
 
   fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1025`) // all pokemon for search results
     .then((response) => response.json())
     .then((data) => {
       const pokemonArray = data.results;
-      pokemonArray.forEach((pokemon) => {
+      pokemonArray.forEach((pokemon, id) => {
         const name = pokemon.name;
-        console.log(name);
+        const pokemonObject = { id, name };
+        pokemonList.push(pokemonObject);
       });
+      console.log(pokemonList); // this list is for the autocomplete search bar
+      //  expect an array of objects with 2 properties, id and pokemon
+      //  [ {id: 0, name: 'bulbasaur'}, {id: 1, name: 'ivysaur'}, {id: 2, name: 'venusaur'} ...]
     })
     .catch((error) => {
       console.error("Something went wrong with retrieving the pokemon!");
@@ -57,10 +62,42 @@ export default function DataFetch() {
     event.preventDefault();
     fetchPokemonData();
   }
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+
+  // Below is the formatting for the autocomplete library
+
+  const handleOnSearch = (string, results) => {
+    console.log(string, results);
+  };
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result);
+  };
+
+  const handleOnSelect = (item) => {
+    // the item selected
+    console.log(item);
+  };
+
+  const handleOnFocus = () => {
+    console.log("Focused");
+  };
+
+  const formatResult = (item) => {
+    return (
+      <>
+        <span style={{ display: "block", textAlign: "left" }}>
+          id: {item.id}
+        </span>
+        <span style={{ display: "block", textAlign: "left" }}>
+          name: {item.name}
+        </span>
+      </>
+    );
+  };
+  ///////////////////////////
 
   return (
     <>
@@ -78,15 +115,18 @@ export default function DataFetch() {
         <button type="submit">Search</button>
       </form>
 
-      {/* <ReactSearchAutocomplete
-        items={items}
+      <ReactSearchAutocomplete
+        className="searchBar"
+        placeholder="search a pokemon"
+        items={pokemonList}
+        fuseOptions={{ keys: ["names"] }}
         onSearch={handleOnSearch}
         onHover={handleOnHover}
         onSelect={handleOnSelect}
         onFocus={handleOnFocus}
-        autoFocus
+        // autoFocus
         formatResult={formatResult}
-      /> */}
+      />
 
       {pokemon ? (
         <>
