@@ -240,3 +240,6 @@ textarea {
   background-color: red;
   margin-right: 40px;
 }
+.searchBar {
+  all: unset;
+}

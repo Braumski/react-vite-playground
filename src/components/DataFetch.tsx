@@ -32,6 +32,8 @@ export default function DataFetch() {
       console.log(pokemonList); // this list is for the autocomplete search bar
       //  expect an array of objects with 2 properties, id and pokemon
       //  [ {id: 0, name: 'bulbasaur'}, {id: 1, name: 'ivysaur'}, {id: 2, name: 'venusaur'} ...]
+
+      // Might have to get rid of this since the last library didnt work.
     })
     .catch((error) => {
       console.error("Something went wrong with retrieving the pokemon!");
@@ -66,39 +68,6 @@ export default function DataFetch() {
     setInputValue(event.target.value);
   };
 
-  // Below is the formatting for the autocomplete library
-
-  const handleOnSearch = (string, results) => {
-    console.log(string, results);
-  };
-  const handleOnHover = (result) => {
-    // the item hovered
-    console.log(result);
-  };
-
-  const handleOnSelect = (item) => {
-    // the item selected
-    console.log(item);
-  };
-
-  const handleOnFocus = () => {
-    console.log("Focused");
-  };
-
-  const formatResult = (item) => {
-    return (
-      <>
-        <span style={{ display: "block", textAlign: "left" }}>
-          id: {item.id}
-        </span>
-        <span style={{ display: "block", textAlign: "left" }}>
-          name: {item.name}
-        </span>
-      </>
-    );
-  };
-  ///////////////////////////
-
   return (
     <>
       <form className="pkmn-search" onSubmit={handleSubmit}>
@@ -115,18 +84,7 @@ export default function DataFetch() {
         <button type="submit">Search</button>
       </form>
 
-      <ReactSearchAutocomplete
-        className="searchBar"
-        placeholder="search a pokemon"
-        items={pokemonList}
-        fuseOptions={{ keys: ["names"] }}
-        onSearch={handleOnSearch}
-        onHover={handleOnHover}
-        onSelect={handleOnSelect}
-        onFocus={handleOnFocus}
-        // autoFocus
-        formatResult={formatResult}
-      />
+      {/* Gonna Use a different search box, whether its a library or I make it myself */}
 
       {pokemon ? (
         <>
