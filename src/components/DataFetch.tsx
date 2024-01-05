@@ -19,10 +19,14 @@ export default function DataFetch() {
   const { theme } = useContext(ThemeContext);
   const pokemonNames = [];
 
-  fetch(`https://pokeapi.co/api/v2/pokemon`)
+  fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1025`) // all pokemon for search results
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.results); //This is where I left off
+      const pokemonArray = data.results;
+      pokemonArray.forEach((pokemon) => {
+        const name = pokemon.name;
+        console.log(name);
+      });
     })
     .catch((error) => {
       console.error("Something went wrong with retrieving the pokemon!");
