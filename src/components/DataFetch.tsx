@@ -20,7 +20,7 @@ export default function DataFetch() {
   const { theme } = useContext(ThemeContext);
   const pokemonList = [];
 
-  fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1025`) // all pokemon for search results
+  fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1025`) // all 1025 pokemon for search results
     .then((response) => response.json())
     .then((data) => {
       const pokemonArray = data.results;
