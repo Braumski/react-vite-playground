@@ -241,5 +241,14 @@ fieldset.feedback {
   display: flex;
 }
 .search input {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  padding: 15px;
+  height: 30px;
+  width: 300px;
+}
+.search-icon {
+  height: 60px;
+  width: 50px;
+  display: grid;
+  place-items: center;
 }
