@@ -1,6 +1,6 @@
 import { useState, useRef, useContext } from "react";
 import { ThemeContext } from "../App";
-
+import SearchBar from "./SearchBar";
 //Library
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
@@ -84,7 +84,7 @@ export default function DataFetch() {
         <button type="submit">Search</button>
       </form>
 
-      {/* Gonna Use a different search box, whether its a library or I make it myself */}
+      <SearchBar />
 
       {pokemon ? (
         <>

@@ -64,8 +64,9 @@ h1 {
 }
 input {
   all: unset;
-  border-radius: 12px;
-  padding: 4px 12px 4px 12px;
+  padding: 8px 10px 10px 8px;
+  margin: 10px;
+  text-align: start;
 }
 select {
   appearance: none;
@@ -208,6 +209,7 @@ fieldset {
 
 .feedback > .field > input {
   padding: 0 4px 0 4px;
+  border-radius: 20px;
 }
 
 fieldset.feedback {
@@ -224,9 +226,8 @@ fieldset.feedback {
   gap: 4px;
   width: 100%;
 }
-textarea {
+.field > textarea {
   all: unset;
-  border-radius: 12px;
   padding: 12px;
   resize: none;
 }
@@ -236,10 +237,9 @@ textarea {
   align-items: center;
   gap: 8px;
 }
-.pkmn-search > input {
-  background-color: red;
-  margin-right: 40px;
+.search-inputs {
+  display: flex;
 }
-.searchBar {
-  all: unset;
+.search input {
+  font-size: 1.5em;
 }
