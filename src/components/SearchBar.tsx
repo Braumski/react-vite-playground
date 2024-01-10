@@ -1,6 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 
-export default function SearchBar({ pokemonList }) {
+export default function SearchBar({ placeholder, pokemonList }) {
   console.log(pokemonList);
   return (
     <div className="search">
@@ -11,9 +11,14 @@ export default function SearchBar({ pokemonList }) {
         </div>
       </div>
       <div className="data-result">
-        {pokemonList.map((name) => {
+        {pokemonList.map((name, key) => {
           return (
-            <a className="pokemon-search-item" href="" target="_blank">
+            <a
+              className="pokemon-search-item"
+              placeholder={placeholder}
+              href="#"
+              target="_blank"
+            >
               <p>{name}</p>
             </a>
           );

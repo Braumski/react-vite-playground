@@ -240,6 +240,7 @@ fieldset.feedback {
   display: flex;
 }
 .search input {
+  border-radius: 4px;
   font-size: 1.3em;
   padding: 15px;
   margin: 0;
@@ -253,9 +254,14 @@ fieldset.feedback {
   place-items: center;
 }
 .search-icon svg {
-  font-size: 35px;
+  font-size: 22px;
 }
 .data-result {
+  padding: 6px;
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-light);
+}
+.data-result a p {
+  color: var(--primary-dark);
 }

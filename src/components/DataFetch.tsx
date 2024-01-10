@@ -23,24 +23,26 @@ export default function DataFetch() {
         pokemonArray.forEach((pokemon) => {
           pokemonList.push(pokemon.name);
         });
-        console.log(pokemonList); // this list is for the autocomplete search bar
-        //  expect an array of objects with 2 properties, id and pokemon
-        //  [ {id: 0, name: 'bulbasaur'}, {id: 1, name: 'ivysaur'}, {id: 2, name: 'venusaur'} ...]
+        console.log(pokemonList);
       })
       .catch((error) => {
         console.error("Something went wrong with retrieving the pokemon!");
         console.error(error);
       });
+    setLoading(false);
   }, []);
 
   // Render loading state while data is being fetched
   if (loading) {
     return <p>Loading...</p>;
+  } else {
+    return (
+      <>
+        <SearchBar
+          placeholder="Enter a pokemon name..."
+          pokemonList={pokemonList}
+        />
+      </>
+    );
   }
-
-  return (
-    <>
-      <SearchBar pokemonList={pokemonList} />
-    </>
-  );
 }
