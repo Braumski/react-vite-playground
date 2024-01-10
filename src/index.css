@@ -255,3 +255,7 @@ fieldset.feedback {
 .search-icon svg {
   font-size: 35px;
 }
+.data-result {
+  display: flex;
+  flex-direction: column;
+}

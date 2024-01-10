@@ -11,8 +11,12 @@ export default function SearchBar({ pokemonList }) {
         </div>
       </div>
       <div className="data-result">
-        {pokemonList.map((name, key) => {
-          return <a>{name}</a>;
+        {pokemonList.map((name) => {
+          return (
+            <a className="pokemon-search-item" href="" target="_blank">
+              <p>{name}</p>
+            </a>
+          );
         })}
       </div>
     </div>
