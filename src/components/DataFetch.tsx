@@ -9,7 +9,7 @@ interface Pokemon {
   };
 }
 
-export default function DataFetch() {
+export default function DataFetchOld() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(true);
   const pokemonList = [];
@@ -39,7 +39,7 @@ export default function DataFetch() {
     return (
       <>
         <SearchBar
-          placeholder="Enter a pokemon name..."
+          placeholder="Enter a pokemon name"
           pokemonList={pokemonList}
         />
       </>

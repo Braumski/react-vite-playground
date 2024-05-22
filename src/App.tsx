@@ -145,7 +145,6 @@ export default function App() {
 
         {/* React routing is managed by third party libraries. The one I am using here
         is called react-router-dom */}
-
         {/* npm install react-router-dom */}
         {/* Check the BrowserRouter tag in the "main.tsx" file */}
         <Routes>
